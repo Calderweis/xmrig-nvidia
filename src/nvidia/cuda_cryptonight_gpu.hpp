@@ -7,6 +7,11 @@
 #include "cuda_keccak.hpp"
 #include "cuda_extra.h"
 
+// CUDA intrinsic function compatibility macros
+#define int2float(x) __int2float_rn(x)
+#define float_as_int(x) __float_as_int(x)
+#define int_as_float(x) __int_as_float(x)
+
 namespace xmrig
 {
 namespace cn_gpu
